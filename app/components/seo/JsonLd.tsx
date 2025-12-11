@@ -152,6 +152,10 @@ export function JsonLd() {
     review: [
       {
         "@type": "Review",
+        itemReviewed: {
+          "@type": "SoftwareApplication",
+          name: "Swasthya Sarathi Healthcare Platform",
+        },
         author: {
           "@type": "Person",
           name: "Priya Sharma",
@@ -168,6 +172,10 @@ export function JsonLd() {
       },
       {
         "@type": "Review",
+        itemReviewed: {
+          "@type": "SoftwareApplication",
+          name: "Swasthya Sarathi Healthcare Platform",
+        },
         author: {
           "@type": "Person",
           name: "Rajesh Kumar",
@@ -184,6 +192,10 @@ export function JsonLd() {
       },
       {
         "@type": "Review",
+        itemReviewed: {
+          "@type": "SoftwareApplication",
+          name: "Swasthya Sarathi Healthcare Platform",
+        },
         author: {
           "@type": "Person",
           name: "Dr. Meera Patel",
