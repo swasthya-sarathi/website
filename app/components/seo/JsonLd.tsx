@@ -149,68 +149,6 @@ export function JsonLd() {
       bestRating: "5",
       worstRating: "1",
     },
-    review: [
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "SoftwareApplication",
-          name: "Swasthya Sarathi Healthcare Platform",
-        },
-        author: {
-          "@type": "Person",
-          name: "Priya Sharma",
-        },
-        datePublished: "2024-10-15",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Finally, a healthcare app that actually works! Booked my father's cardiology appointment in minutes. The video consultation feature saved us a 100km trip to the city.",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "SoftwareApplication",
-          name: "Swasthya Sarathi Healthcare Platform",
-        },
-        author: {
-          "@type": "Person",
-          name: "Rajesh Kumar",
-        },
-        datePublished: "2024-11-02",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "As a diabetic, I need regular checkups and medicines. This app reminds me of my appointments, delivers medicines on time, and keeps all my reports in one place.",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "SoftwareApplication",
-          name: "Swasthya Sarathi Healthcare Platform",
-        },
-        author: {
-          "@type": "Person",
-          name: "Dr. Meera Patel",
-        },
-        datePublished: "2024-11-20",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "From a doctor's perspective, this platform is excellent. The patient management system is intuitive, and the video consultation quality is superb.",
-      },
-    ],
   };
 
   const faqSchema = {
