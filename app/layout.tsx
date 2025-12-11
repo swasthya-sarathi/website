@@ -98,9 +98,12 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 
   manifest: "/manifest.json",
@@ -129,11 +132,21 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <JsonLd />
+        {/* DNS prefetch and preconnect for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        {/* Preload critical assets */}
+        <link
+          rel="preload"
+          href="/favicon.svg"
+          as="image"
+          type="image/svg+xml"
         />
       </head>
       <body
