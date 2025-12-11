@@ -1,0 +1,14 @@
+# Swasthya Sarathi - robots.txt
+# https://swasthyasarathi.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://swasthyasarathi.com/sitemap.xml
