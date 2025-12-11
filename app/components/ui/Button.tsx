@@ -15,6 +15,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit";
+  ariaLabel?: string;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -50,6 +51,7 @@ export function Button({
   className = "",
   onClick,
   type = "button",
+  ariaLabel,
 }: ButtonProps) {
   const IconComponent = getIcon(icon);
 
@@ -62,20 +64,27 @@ export function Button({
   const content = (
     <>
       {children}
-      {IconComponent && <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />}
+      {IconComponent && (
+        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
+      )}
     </>
   );
 
   if (href) {
     return (
-      <a href={href} className={combinedStyles}>
+      <a href={href} className={combinedStyles} aria-label={ariaLabel}>
         {content}
       </a>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} className={combinedStyles}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={combinedStyles}
+      aria-label={ariaLabel}
+    >
       {content}
     </button>
   );

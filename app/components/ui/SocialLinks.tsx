@@ -12,17 +12,19 @@ export function SocialLinks({ links, variant = "default" }: SocialLinksProps) {
       : "w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-white";
 
   return (
-    <div className="flex gap-3 sm:gap-4">
+    <nav aria-label="Social media links" className="flex gap-3 sm:gap-4">
       {links.map((social, index) => (
         <a
           key={index}
           href={social.href}
           aria-label={social.label}
+          rel="noopener noreferrer"
+          target="_blank"
           className={`${containerStyles} flex items-center justify-center transition-colors duration-200`}
         >
-          <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+          <social.icon className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
         </a>
       ))}
-    </div>
+    </nav>
   );
 }
