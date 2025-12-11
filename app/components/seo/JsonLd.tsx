@@ -129,28 +129,6 @@ export function JsonLd() {
     ],
   };
 
-  const aggregateRatingSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Swasthya Sarathi Healthcare Platform",
-    description:
-      "Your complete healthcare companion for booking doctor appointments, video consultations, lab tests, and medicine delivery.",
-    applicationCategory: "HealthApplication",
-    operatingSystem: "Web, Android, iOS",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "INR",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "5000",
-      bestRating: "5",
-      worstRating: "1",
-    },
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -224,12 +202,6 @@ export function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aggregateRatingSchema),
         }}
       />
       <script
