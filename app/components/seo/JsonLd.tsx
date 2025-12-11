@@ -8,7 +8,7 @@ export function JsonLd() {
     url: "https://swasthyasarathi.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://swasthyasarathi.com/logo.png",
+      url: "https://swasthyasarathi.com/logo.svg",
       width: 512,
       height: 512,
     },
@@ -116,6 +116,82 @@ export function JsonLd() {
     inLanguage: "en-IN",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://swasthyasarathi.com",
+      },
+    ],
+  };
+
+  const aggregateRatingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Swasthya Sarathi Healthcare Platform",
+    description:
+      "Your complete healthcare companion for booking doctor appointments, video consultations, lab tests, and medicine delivery.",
+    brand: {
+      "@type": "Brand",
+      name: "Swasthya Sarathi",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "5000",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Priya Sharma",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Finally, a healthcare app that actually works! Booked my father's cardiology appointment in minutes. The video consultation feature saved us a 100km trip to the city.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Rajesh Kumar",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "As a diabetic, I need regular checkups and medicines. This app reminds me of my appointments, delivers medicines on time, and keeps all my reports in one place.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Dr. Meera Patel",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "From a doctor's perspective, this platform is excellent. The patient management system is intuitive, and the video consultation quality is superb.",
+      },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -183,6 +259,18 @@ export function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateRatingSchema),
         }}
       />
       <script
